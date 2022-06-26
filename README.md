@@ -17,6 +17,4 @@ https://puntotecnologico.co/
 
 https://www.musimundo.com/
 
-https://www.ktronix.com/
-
 https://www.fravega.com/
