@@ -18,3 +18,7 @@ https://puntotecnologico.co/
 https://www.musimundo.com/
 
 https://www.fravega.com/
+
+## Tablero de Trello:
+
+https://trello.com/b/XrDdo1hf/grupo1-electro-house
