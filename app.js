@@ -7,7 +7,7 @@ const pathPublic = path.resolve(__dirname, './public');
 app.use(express.static(pathPublic));
 
 app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
+    res.sendFile(__dirname + '/views/login.html');
 });
 
 app.listen(5000, ()=>{
