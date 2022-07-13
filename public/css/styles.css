@@ -3,10 +3,21 @@
     padding: 0px;
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: "Roboto", sans-serif;
-    background-color: yellow;
+    background-color: rgb(231, 220, 220);
   }
   
- 
+  .form-register,
+  .form-login {
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-login input,
+  .form-register input,
+  .form-register .btn {
+    margin-bottom: 4px;
+  }
