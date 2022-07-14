@@ -2,5 +2,27 @@
   "dependencies": {
     "express": "^4.18.1",
     "node": "^18.5.0"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "name": "grupo_1_electro_house",
+  "description": "**“_Electro House_”** Es un e-commerce dedicado a la venta de productos de tecnología especialmente computadoras, celulares y accesorios.\r Es una tienda posicionada a nivel sudamérica con las mejores ofertas y gran variedad de productos, con más de 10 años de trayectoria, que siempre va a la vanguardia en temas de tecnología. La confianza que hemos generado ha permitido mantener a nuestros clientes en el tiempo, nuestra página les permite hacer un registro para realizar compras más ágiles y seguir sus pedidos, sus productos son entregados en el menor tiempo posible y en las mejores condiciones de empaque y transporte. La empresa tiene como nicho objetivo de clientes a una comunidad apasionada por la tecnología, en su gran mayoría con edades entre 15 y 70 años, que siempre quieren tener los últimos lanzamientos del mercado.\r ## Integrantes del proyecto:\r . Alejandro Armesto_: Administrador de Empresas, de Tucumán, Argentina, apasionado por la tecnología y las computadoras.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Axlejandro/grupo_1_electro_house.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Axlejandro/grupo_1_electro_house/issues"
+  },
+  "homepage": "https://github.com/Axlejandro/grupo_1_electro_house#readme"
 }
