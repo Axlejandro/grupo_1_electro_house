@@ -23,6 +23,9 @@ app.get('/login', (req,res)=>{
 app.get('/register', (req,res)=>{
     res.sendFile(__dirname + '/views/register.html');
 });
+app.get('/productos', (req,res)=>{
+    res.sendFile(__dirname + '/views/productos.html');
+});
 app.listen(5000, ()=>{
     console.log('Servidor funcionando en: http://localhost:5000');
 });
