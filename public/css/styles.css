@@ -290,16 +290,7 @@ article div.main-article {
 }
 
 
-  .login,
-  .register {
-    width: 60%;
-    margin: auto;
-    padding-top: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #b4e7f8;
-  }
+  
 
 
 /**RESPONSIVE MAIN*/
@@ -413,24 +404,7 @@ footer div {
   padding-left: 2%;
 }
 
-
-/**LOGIN Y REGISTER*/
-
-.form-register,
-.form-login {
-  padding-top: 8px;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-login input,
-.form-register input,
-.form-register .btn {
-  margin-bottom: 4px;
-}
-
 p{
   text-align: center;
   font-size: small;
 }
-
