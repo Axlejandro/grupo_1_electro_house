@@ -1,91 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Tipografia Roboto-->
-    <link
-        href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:wght@100;300;400;500;700&display=swap"
-        rel="stylesheet">
-
-    <!--Libreria  Fontawesome-->
-    <script src="https://kit.fontawesome.com/439c181295.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/9f8e2238b5.js" crossorigin="anonymous"></script>
-
-    <!--EStilos propios-->
-    <link  href="/css/styles.css" rel="stylesheet">
-    <link  href="/css/colors.css" rel="stylesheet">
-
-    <title>Electro House</title>
-
-</head>
-
+<%- include('./partials/head') %> 
 <body>
-    <header>
-
-        <div class="nav-container">
-            <div class="nav">
-            <ul class="nav">
-                <li><a href="#"><i class="fa-brands fa-whatsapp"></i> 0013224456</a></li>
-                <li><a href="/register"><i class="far fa-id-card"></i> Registrarse</a></li>
-                <li><a href="#"><i class="fas fa-truck"></i> Seguí tu compra</a></li>
-                <li><a href="/login"><i class="far fa-id-card"></i> Iniciar Sesion</a></li>
-            </ul>
-            </div>
-
-            <div class="logos-redes">
-            <ul class="logos-redes">
-                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a> </li>
-                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            </ul>
-            </div>
-        </div>
     
-        
-        <div class="logo-container">
-
-            <div class="logo-bar-container">
-                <div class="logo">
-                    <a href="/"><img src="/images/logo/logo.jpeg" atl="Logo"></a>
-                </div>
-            </div>   
-
-            <div class="menu-container">
-                <ul class="menu">
-                    <li><a href="/productos">PRODUCTOS</a></li>
-                    <li><a href="#">CONTACTO</a></li>
-                    <li><a href="#">NOSOTROS</a></li>
-                    <li><a href="/login">MI CUENTA</a></li>
-                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
-
-                </ul>
-            </div>            
-            
-
-            <div class="search-button-container">
-                <div class="search-container">
-                     <input type="text" placeholder="  Buscar">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-            </div>   
-            
-            </div>
-
-                
-            <div class="burger-container">
-                <div class="icon-burger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-
-            </div>
-
-    </header>
-
+    <%- include('./partials/header') %>
         
     <main>
 
@@ -233,42 +151,9 @@
     </main>
     
     
+    <%- include('./partials/footer') %>
     
-    
-    <footer>
-
-        <div class="info-footer">
-
-            
-
-            <div>        
-                <div class="icon-footer">
-                    <i class="fas fa-credit-card"></i>
-                </div>
-                <p>Pagá con tarjeta o en efectivo</p>
-            </div>
-
-            <div>
-                <div class="icon-footer">
-                <i class="fas fa-gift"></i>
-                </div>
-                <p>Envío gratis desde $150.000</p>
-                
-            </div>
-        
-            <div>
-                <div class="icon-footer"><i class="fas fa-user-shield"></i></div>
-                <p>Seguridad de principio a fin</p>
-                
-            </div>
-
-        </div>
-
-        <div class="copyright">
-            Copyright 1999-2020 Electro House S.R.L.
-        </div>
-
-    </footer>
+   
 
 </body>
 

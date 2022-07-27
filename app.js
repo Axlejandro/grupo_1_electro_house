@@ -1,31 +1,27 @@
 const express = require('express');
 const path = require('path');
 
+const mainRouter = require('./src/routes/mainRouter');
+const userRouter = require('./src/routes/userRouter');
+const productsRouter = require('./src/routes/productsRouter');
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './src/views'));
+
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 const pathPublic = path.resolve(__dirname, './public');
 app.use(express.static(pathPublic));
 
-app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
-}); 
+app.use('/', mainRouter);
+app.use('/user', userRouter);
+app.use('/products', productsRouter);
 
-app.post('/', (req, res) => {
-    res.redirect('/');
-});
 
-app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
-});
-app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
-});
-app.get('/productos', (req,res)=>{
-    res.sendFile(__dirname + '/views/productos.html');
-});
-app.listen(5000, ()=>{
+
+
+app.listen(5000, () => {
     console.log('Servidor funcionando en: http://localhost:5000');
 });
