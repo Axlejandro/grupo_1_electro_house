@@ -290,6 +290,7 @@ article div.main-article {
 }
 
 
+<<<<<<< HEAD
   .login,
   .register {
    
@@ -301,6 +302,9 @@ article div.main-article {
     align-items: center;
     background-color: #b4e7f8;
   }
+=======
+  
+>>>>>>> 1bdc8e655c979a69a377f5ea91e2329be17fa9e4
 
 
 /**RESPONSIVE MAIN*/
@@ -414,24 +418,7 @@ footer div {
   padding-left: 2%;
 }
 
-
-/**LOGIN Y REGISTER*/
-
-.form-register,
-.form-login {
-  padding-top: 8px;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-login input,
-.form-register input,
-.form-register .btn {
-  margin-bottom: 4px;
-}
-
 p{
   text-align: center;
   font-size: small;
 }
-
