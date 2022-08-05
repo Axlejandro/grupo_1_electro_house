@@ -1,160 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head') %> 
-<body>
-    
-    <%- include('./partials/header') %>
-        
-    <main>
+<%- include('./partials/head') %>
 
-        <div>
-        <section class="banner">
-            <img src="images/logo/banner.png" alt="Banner de ofertas" class="banner">
-        </section>
-        </div>
-        
-        <section class="newitems">
-            <h3>New Items</h3>
-            
-            <div class="products">
-                
-                <article>
-                    <img src="images/portatiles/acer-aspire.jpg" alt="Imagen" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">ACER ASPIRE 5 A514-53-3427,I3,HDD1TB,4GB,14" HD LCD,Win10H</h4>
-                        <div class="price-discount">
-                        <p class="price">$1'800.000</p>
-                        <p class="discount"></p>
-                        </div>
-                        
+    <body>
+
+        <%- include('./partials/header') %>
+
+            <main>
+
+                <div>
+                    <section class="banner">
+                        <img src="images/logo/banner.png" alt="Banner de ofertas" class="banner">
+                    </section>
+                </div>
+
+                <section class="newitems">
+                    <h3>New Items</h3>
+
+                    <div class="products">
+
+                        <%products.forEach(product=> { %>
+
+                            <% if (product.newItem==true) { %>
+
+                                <article>
+                                    <img src="/images/portatiles/<%= product.image%>" alt="Imagen" class="product_img">
+                                    <div class="main-article">
+                                        <h4 class="description">
+                                            <%= product.description%>
+                                        </h4>
+                                        <div class="price-discount">
+                                            <p class="price">$ <%= product.price%>
+                                            </p>
+                                            <% if (product.discount>0) { %>
+                                                <p class="discount">
+                                                    <%= product.discount%>
+                                                </p>
+                                                <% } %>
+                                        </div>
+                                    </div>
+
+                                </article>
+                                <% } %>
+                                    <% }) %>
+
                     </div>
-                </article>
-                
-                <article>
-                    <img src="images/portatiles/acer-nitro.jpg" alt="Imagen" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">ACER NITRO AN515-54-55MX I5 9300H SSD512GB 12GB 15.6"FHD IPS 4GBGTX1650 W10 Home Negro</h4>
-                        <div class="price-discount">
-                        <p class="price">$3'810.000</p>
-                        <p class="discount"></p>
-                        </div>
-                        
-                    </div>
-                </article>
-                
-                <article>
-                    <img src="images/portatiles/asus-celeron.png" alt="Imagen" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">ASUS CELERON X543MA DM1336</h4>
-                        <div class="price-discount">
-                        <p class="price">$999.000</p>
-                        <p class="discount"></p>
-                        </div>
-                        
-                    </div>
-                </article>
-                
-                <article>
-                    <img src="images/portatiles/dell-inspiron.jpg" alt="Imagen" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">DELL INSPIRON 15 3000 6501, I3, HDD1TB, 4GB, 15.6", Linux</h4>
-                        <div class="price-discount">
-                        <p class="price">$1'750.000</p>
-                        <p class="discount"></p>
-                        </div>
-                        
-                    </div>
-                </article>
-            
-            </div>
-        
-        </section>
+
+                </section>
 
 
-        <section>
-            <h3>Categorias Populares</h3>
-        
-            <div class="categorias-container">
-                
-                <ul class="categorias">
-                    <li><a href="#"><i class="fa-solid fa-gamepad"></i> Gamer</a></li>
-                    <li><a href="#"><i class="fa-solid fa-laptop"></i> Portatiles</a></li>
-                    <li><a href="#"><i class="fa-solid fa-headset"></i> Accesorios</a></li>
-                    <li><a href="#"><i class="fa-solid fa-hard-drive"></i> Almacenamiento</a></li>
-                    <li><a href="#"><i class="fa-solid fa-fan"></i> Partes</a></li>
-                </ul>
-            </div>
+                <section>
+                    <h3>Categorias Populares</h3>
 
-        </section>
+                    <div class="categorias-container">
 
-
-        <section class="bestsellers">
-            <h3>Bestsellers</h3>
-            
-            <div class="products">
-
-                <article>
-                    <img src="images/teclados/TECLADO-GAMERTECH.jpg" alt="Imagen" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">TECLADO GAMERTECH NOOB GT653T</h4>
-                        <div class="price-discount">
-                        <p class="price">$69.000</p>
-                        <p class="discount"></p>
-                        </div>
-                        
+                        <ul class="categorias">
+                            <li><a href="#"><i class="fa-solid fa-gamepad"></i> Gamer</a></li>
+                            <li><a href="#"><i class="fa-solid fa-laptop"></i> Portatiles</a></li>
+                            <li><a href="#"><i class="fa-solid fa-headset"></i> Accesorios</a></li>
+                            <li><a href="#"><i class="fa-solid fa-hard-drive"></i> Almacenamiento</a></li>
+                            <li><a href="#"><i class="fa-solid fa-fan"></i> Partes</a></li>
+                        </ul>
                     </div>
-                </article>
-                
-                <article>
-                    <img src="images/teclados/DIADEMA.jpg" alt="Imagen" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">DIADEMA REDRAGON PANDORA 2 NEGRA RGB H350</h4>
-                        <div class="price-discount">
-                        <p class="price">$155.000</p>
-                        <p class="discount"></p>
-                        </div>
-                        
-                    </div>
-                </article>
-                
-                <article>
-                    <img src="images/teclados/CHASIS.jpg" alt="Imagen" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">CHASIS POWERTRAIN V.T3 FANS RGB</h4>
-                        <div class="price-discount">
-                        <p class="price">$395.000</p>
-                        <p class="discount"></p>
-                        </div>
-                        
-                    </div>
-                </article>
-                        
-                
-                <article>
-                    <img src="images/portatiles/acer-nitro.jpg" alt="Imagen" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">ACER NITRO AN515-54-55MX I5 9300H SSD512GB 12GB 15.6"FHD IPS 4GBGTX1650 W10 Home Negro</h4>
-                        <div class="price-discount">
-                        <p class="price">$3'810.000</p>
-                        <p class="discount"></p>
-                        </div>
-                        
-                    </div>
-                </article>
-                
-                
-            
-            </div>
-        
-        </section>
-    
-    </main>
-    
-    
-    <%- include('./partials/footer') %>
-    
-   
 
-</body>
+                </section>
+
+
+                <section class="bestsellers">
+                    <h3>Bestsellers</h3>
+
+
+
+                    <div class="products">
+
+                        <%products.forEach(product=> { %>
+
+                            <% if (product.bestSeller==true) { %>
+
+                                <article>
+                                    <img src="/images/portatiles/<%= product.image%>" alt="Imagen" class="product_img">
+                                    <div class="main-article">
+                                        <h4 class="description">
+                                            <%= product.description%>
+                                        </h4>
+                                        <div class="price-discount">
+                                            <p class="price">$ <%= product.price%>
+                                            </p>
+                                            <% if (product.discount>0) { %>
+                                                <p class="discount">
+                                                    <%= product.discount%>
+                                                </p>
+                                                <% } %>
+                                        </div>
+                                    </div>
+
+                                </article>
+                                <% } %>
+                                    <% }) %>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+
+            <%- include('./partials/footer') %>
+
+
+
+    </body>
 
 </html>
