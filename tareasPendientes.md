@@ -5,13 +5,12 @@ Logo .svg ---> Cristiam Baez
 ## Sprint 2
 
 Detalle de producto ---> Juan Arellano
-Carrito de compras---> Cristian Baez
+Carrito de compras---> Cristiam Baez
 
 ## Sprint 3
 
 Hacer los include de los partials 
 Pasar la lista de productos a ejs
-
 
 ## Sprint 4
 

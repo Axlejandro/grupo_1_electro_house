@@ -19,6 +19,7 @@ app.use(express.static(pathPublic));
 app.use('/', mainRouter);
 app.use('/user', userRouter);
 app.use('/products', productsRouter);
+app.use('/cart', productsRouter);
 app.use(methodOverride('_method'));
 
 
