@@ -1,17 +1,19 @@
 ## Sprint 1
 
-Logo .svg ---> Cristiam Baez
+Organizar estilos pagina web ---> Cristiam Baez
+Arreglar el header y footer ---> Cristiam Baez
 
 ## Sprint 2
 
 Detalle de producto ---> Juan Arellano
-Carrito de compras---> Cristiam Baez
+Retro.md ---> Elizabeth Vélez
 
 ## Sprint 3
 
-Hacer los include de los partials 
-Pasar la lista de productos a ejs
+Retro.md ---> Elizabeth Vélez
 
 ## Sprint 4
 
-Archivos products.json y users.json con datos de productos y usuarios.
+Pagina de carga del producto ---> Cristiam Baez
+Agregar, eliminar y modificar productos y usuarios en Json ---> Todos
+Organizar Trello ---> Elizabeth Vélez
