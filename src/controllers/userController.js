@@ -1,16 +1,12 @@
-
-
-
 const controller = {
     login: (req, res) =>{
-        res.render('login');        
-    
+        res.render('login');
     },
-
     register: (req, res) =>{
         res.render('register');
-        
-    
+    },
+    cart: (req, res) =>{
+        res.render('cart');
     },
     storeUser: (req, res) =>{
     //TODO: aca falta implementar la logica para almacenar el usuario//
@@ -18,4 +14,5 @@ const controller = {
     }  
     // TODO: crear metodo para hacer el proceso de login//
 }
+
 module.exports = controller

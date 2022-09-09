@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "fullName": "Cristiam Baez",
+        "email": "baezcristiam64@gmail.com",
+        "adress": "Bogotá D,C",
+        "country": "Colombia",
+        "phoneNumber": "3166181778",
+        "password": "abc123",
+        "confirmPassword": "abc123",
+        "birthday date": "18/02/1997",
+        "image": "perfil.jpg"
+    },
+    {
+        "id": 2,
+        "fullName": "",
+        "email": "",
+        "adress": "",
+        "country": "",
+        "phoneNumber": "",
+        "password": "",
+        "confirmPassword": "",
+        "birthday date": "",
+        "image": ""
+    },
+    {
+        "id": 3,
+        "fullName": "",
+        "email": "",
+        "adress": "",
+        "country": "",
+        "phoneNumber": "",
+        "password": "",
+        "confirmPassword": "",
+        "birthday date": "",
+        "image": ""
+    },
+    {
+        "id": 4,
+        "fullName": "",
+        "email": "",
+        "adress": "",
+        "country": "",
+        "phoneNumber": "",
+        "password": "",
+        "confirmPassword": "",
+        "birthday date": "",
+        "image": ""
+    }
+]

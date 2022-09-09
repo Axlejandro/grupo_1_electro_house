@@ -1,0 +1,103 @@
+/* Inicio Estilos Carrito Compras */
+
+.resumen-compra {
+    background-image: url('../images/backgroundCart.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    margin-top: -68px;
+  }
+  
+  .titulo-cart {
+    color: white;
+    font-size: 3rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  section img {
+    width: 15%;
+  }
+  
+  .resumen-compra {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .resumen-compra div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .caja-productos {
+    width: 69%;
+    flex-direction: column;
+    color: white;
+    background: #ffffff3b;
+    border-radius: 16px;
+  }
+  
+  .item-producto {
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+  }
+  
+  .item-producto p {
+    font-size: 1rem;
+  }
+  
+  .cupon-subtotal {
+    width: 29%;
+    flex-direction: column;
+  }
+  
+  .caja-cupon, .caja-resumen {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    color: white;
+    background: #ffffff3b;
+    border-radius: 16px;
+  }
+  
+  .caja-cupon p, .caja-resumen p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .codigo-cupon {
+    justify-content: space-evenly;
+  }
+  
+  .codigo-cupon input {
+    width: 60%;
+    height: 35px;
+  }
+  
+  .caja-cupon button, .caja-resumen button {
+    width: 30%;
+    height: 35px;
+  }
+  
+  .caja-resumen {
+    margin-top: 15px;
+  }
+  
+  .descripcion-valor {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .input-cart {
+    width: 5%;
+    height: 15%;
+    border-radius: 5px;
+  }
+  
+  /* Fin Estilos Carrito Compras */

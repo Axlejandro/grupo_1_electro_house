@@ -22,7 +22,7 @@ html{
 /**HEADER*/
 
 header{
-  background-color: var(--azul3);
+  background-color: white;
   display: flex;
   flex-direction: column;
   
@@ -58,7 +58,7 @@ display:none;
 
 
 .logo {
-  width:70%;
+  width:100%;
   padding: 10px;
   
   
@@ -158,7 +158,7 @@ button {
 .nav-container{
   display: flex;
   flex-direction: row;
-  background-color: var(--azul5);
+  background-color: var(--gris);
   
 }
 
@@ -166,9 +166,9 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 55%;
+  width: 60%;
   padding: 0 0 0 10px;
-  font-size: 12px;
+  font-size: 18px;
   
 }
 
@@ -290,7 +290,6 @@ article div.main-article {
 }
 
 
-<<<<<<< HEAD
   .login,
   .register {
    
@@ -300,11 +299,8 @@ article div.main-article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #b4e7f8;
+    background-color: var(--gris);
   }
-=======
-  
->>>>>>> 1bdc8e655c979a69a377f5ea91e2329be17fa9e4
 
 
 /**RESPONSIVE MAIN*/
@@ -395,9 +391,9 @@ article div.main-article {
 
 
 footer{
-  background-color: var(--azul5);
+  background-color: var(--gris);
   text-align: center;
-  color:var(--azul1);
+  color:var(--azul1g);
   
 }
 
