@@ -4,10 +4,11 @@ const userController = require('../controllers/userController');
 
 const router = express.Router();
 
-router.get('/login', userController.login);
-router.get('/register', userController.register);
-router.get('/cart', userController.cart);
-router.post('/',userController.storeUser);
 
+router.get('/register', userController.register);
+router.post('/',userController.storeUser);
+router.post('/register',userController.createUser);
+router.get('/login', userController.login);
+router.get('/userEdit/:idUser', userController.edit);
 
 module.exports = router;

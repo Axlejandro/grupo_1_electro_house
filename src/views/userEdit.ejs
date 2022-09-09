@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include('./partials/head') %>
+
+<body>
+    <%- include('./partials/header') %>
+
+  
+  
+   <br>
+   <div class="container">
+    <main class="register">
+        <h2> Editar Usuario</h2>
+        <form action="/userEdit?_method=PUT" method="POST" class="form-register">
+            <input type="text" name="name" placeholder="Nombre y apellido" value="<%= userToEdit.name %> ">
+            <input type="text" name="user" placeholder="Nombre de usuario">
+            <input type="email" name="email" placeholder="E-mail">
+            <input type="text" name="addres" placeholder="Domicilio">
+            <input type="text" name="pais" placeholder="Pais de residencia">
+            <input type="tel" name="tel" placeholder="Telefono">
+            <input type="password" name="pass" placeholder="Contraseña">
+            <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+            <br>
+           <label>Fecha de nacimiento</label> <input type="date" name="birth_date" id="birth_date">
+            <br>
+            <h4>Elegí tu foto de usuario</h4>
+            <br>
+            <input type="file" name="avatar">
+            <br>
+            <button class="btn" type="submit">Editar</button>
+            <br>
+        </form> 
+    
+    </main>
+</div>
+<%- include('./partials/footer') %>
+
+</body>
+
+</html>
+    
