@@ -16,12 +16,9 @@
         "name": "ACER NITRO",
         "description": "AN515-54-55MX I5 9300H SSD512GB 12GB 15.6'' FHD IPS 4GBGTX1650 W10 Home Negro",
         "image": "acer-nitro.jpg",
-        "subCategory":["workstation", "gamer", "15inch"],
-        "newItem": true,
-        "bestSeller":true,
         "category": "notebook",
         "price": 883,
-        "discount":5
+        "brand":"Acer"
     },
     {
         "id": 3,

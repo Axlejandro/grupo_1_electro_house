@@ -6,9 +6,9 @@ const router = express.Router();
 
 
 router.get('/register', userController.register);
-router.post('/register',userController.storeUser);
-
+router.post('/',userController.storeUser);
 router.get('/login', userController.login);
 router.get('/userEdit/:idUser', userController.edit);
+router.get('/cart', userController.cart);
 
 module.exports = router;
