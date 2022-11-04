@@ -1,5 +1,8 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = '';
+
+    
+    
+    let alias = 'Product';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -8,65 +11,55 @@ module.exports = (sequelize, dataTypes) => {
         },
         
         
-        fullName: {
+        name: {
             type: dataTypes.STRING(256),
             allowNull: false
         },
-        userName: {
-            type: dataTypes.STRING(256),
-            allowNull: false
-        },
-
-        email: {
-            type: dataTypes.STRING(256),
-            allowNull: false
-        },
-
-        adress: {
-            type: dataTypes.TEXT,
-            allowNull: false
-        },
-
-        phoneNumber: {
-            type: dataTypes.TEXT,
-            allowNull: false
-        },
-
-        password: {
-            type: dataTypes.STRING(128),
-            allowNull: false
-        },
-
-        birthdayDate: {
+        description: {
             type: dataTypes.TEXT,
             allowNull: false
         },
 
         image: {
             type: dataTypes.TEXT,
-            allowNull: true
+            allowNull: false
         },
-       
+
+        price: {
+            type: dataTypes.DECIMAL(11,2),
+            allowNull: false
+        },
+
+        
         
     };
     let config = {
-        tableName: 'users',
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        tableName: 'products',
+        timestamps: false,
+        
     }
-    const users = sequelize.define(alias, cols, config); 
+    
+    const Product = sequelize.define(alias, cols, config); 
 
-    User.associate = function (models) {
-        User.belongsToMany(models.Country, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "countries",
-            through: 'user_country',
-            foreignKey: 'user_id',
-            otherKey: 'country_id',
+    Product.associate = function (models) {
+        Product.belongsToMany(models.Category, { 
+            as: "categories",
+            through: 'product_category',
+            foreignKey: 'product_id',
+            otherKey: 'category_id',
             timestamps: false
         })
     }
 
-    return User
+    Product.associate = function (models) {
+        Product.belongsToMany(models.Brand, { 
+            as: "brands",
+            through: 'product_brand',
+            foreignKey: 'product_id',
+            otherKey: 'brand_id',
+            timestamps: false
+        })
+    }
+
+    return Product
 };
