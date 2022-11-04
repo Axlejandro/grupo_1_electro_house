@@ -57,12 +57,9 @@ module.exports = (sequelize, dataTypes) => {
     const User = sequelize.define(alias, cols, config); 
 
     User.associate = function (models) {
-        User.belongsToMany(models.Country, { // models.Movie -> Movies es el valor de alias en movie.js
-            as: "countries",
-            through: 'user_country',
-            foreignKey: 'user_id',
-            otherKey: 'country_id',
-            timestamps: false
+        User.belongsTo(models.Country, {
+            as: "users_country",
+            foreignKey: "countries_id"
         })
     }
 

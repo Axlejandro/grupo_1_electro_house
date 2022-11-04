@@ -7,6 +7,7 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true
         },
         
@@ -36,30 +37,28 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         tableName: 'products',
         timestamps: false,
+        deletedAt:false
         
     }
     
     const Product = sequelize.define(alias, cols, config); 
 
+
     Product.associate = function (models) {
-        Product.belongsToMany(models.Category, { 
-            as: "categories",
-            through: 'product_category',
-            foreignKey: 'product_id',
-            otherKey: 'category_id',
-            timestamps: false
+        Product.belongsTo(models.Category, {
+            as: "products_category",
+            foreignKey: "categories_id"
         })
     }
 
-    Product.associate = function (models) {
-        Product.belongsToMany(models.Brand, { 
-            as: "brands",
-            through: 'product_brand',
-            foreignKey: 'product_id',
-            otherKey: 'brand_id',
-            timestamps: false
-        })
-    }
+        Product.associate = function (models) {
+            Product.belongsTo(models.Brand, {
+                as: "products_brand",
+                foreignKey: "brand_id"
+            })
+        }
+
+    
 
     return Product
 };

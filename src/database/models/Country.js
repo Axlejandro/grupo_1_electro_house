@@ -27,25 +27,14 @@ module.exports = (sequelize, dataTypes) => {
     
     const Product = sequelize.define(alias, cols, config); 
 
-    Product.associate = function (models) {
-        Product.belongsToMany(models.Category, { 
-            as: "categories",
-            through: 'product_category',
-            foreignKey: 'product_id',
-            otherKey: 'category_id',
-            timestamps: false
+    Country.associate = function (models) {
+        Country.hasMany(models.User, {
+            as: "country_users",
+            foreignKey: "countries_id"
         })
     }
 
-    Product.associate = function (models) {
-        Product.belongsToMany(models.Brand, { 
-            as: "brands",
-            through: 'product_brand',
-            foreignKey: 'product_id',
-            otherKey: 'brand_id',
-            timestamps: false
-        })
-    }
+    
 
     return Country
 };
