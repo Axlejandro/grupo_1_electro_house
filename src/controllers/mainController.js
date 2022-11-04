@@ -1,20 +1,33 @@
+let db =require("../database/models");
 
-const fs=require("fs");
-const path= require("path");
-const productsFilePath = path.join(__dirname, '../../data/productsDataBase.json');
+//const fs=require("fs");
+//const path= require("path");
+//const productsFilePath = path.join(__dirname, '../../data/productsDataBase.json');
 
-function getProducts() {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    return products;
-}
 
-const controller = {
-    index: (req, res) =>{
-        const products = getProducts();
-        res.render('home', {products});
-    
-    
+const mainController ={
+    index: async(req, res) =>{
+        const products =await db.Product.findAll()
+        
+
+
+
     }
-    
 }
-module.exports = controller
+
+
+//function getProducts() {
+   // const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+   // return products;
+//}
+
+//onst controller = {
+   // index: (req, res) =>{
+    //    const products = getProducts();
+      //  res.render('home', {products});
+    
+    
+    //}
+    
+//}
+module.exports = mainController
