@@ -9,29 +9,49 @@
   
   
    <br>
-   <div class="container">
-    <main class="register">
-        <h2>Formulario de creación de producto</h2>
-        <form action="/products/create" method="POST" class="form-register">
-            <input type="text" name="name" placeholder="Nombre del producto">
-            <input type="text" name="description" placeholder="Descripción del producto">
-            <br>
-            <h4>Subí la foto del producto</h4>
-            <br>
-            <input type="file" name="image">
-            <br>
-            <input type="text" name="price" placeholder="Precio">
-                  
-            
-            <input type="text" name="pais" placeholder="Pais de residencia">
-            <input type="tel" name="tel" placeholder="Telefono">
-            <input type="password" name="pass" placeholder="Contraseña">
-            <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
-            <br>     
-            <button class="btn" type="submit">Cargar producto</button>
-            <button class="btn-secondary" type="reset">Borrar</button>
-            <br>
-        </form> 
+   <main class="cart">
+                <h1 class="titulo-cart">CARGAR PRODUCTO</h1>
+
+                <section class="resumen-compra">
+                    <div class="caja-cupon">
+
+                        <form action="/products/create" method="POST" class="form-register">
+                            <input type="text" name="name" placeholder="Nombre del producto">
+                            <br>
+                            <input type="text" name="description" placeholder="Descripción del producto">
+                            <br>
+                            <br>
+
+                            <h4>Subí la foto del producto</h4>
+                            <br>
+                            <input type="file" name="image">
+
+                            <br>
+                            <br>
+                            <input type="text" name="price" placeholder="Precio">
+
+                            <h4>Categoria</h4>
+                            <select name="Categoria">
+                                <% for (let i=0; i< category.length; i++) { %>
+                                <option  value="<%=category[i].id%>">
+                                    <%= category.name%>
+
+                                </option>
+                                <%}%>
+                            </select>
+                            <h4>Marca</h4>
+                            <input type="tel" name="tel" placeholder="Telefono">
+                            <input type="password" name="pass" placeholder="Contraseña">
+                            <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+                            <br>
+                            <br>
+                            <br>
+                            <button class="btn" type="submit">Cargar producto</button>
+                            <button class="btn-secondary" type="reset">Borrar</button>
+                            <br>
+                        </form> 
+        </div>
+        </section>
     
     </main>
 </div>

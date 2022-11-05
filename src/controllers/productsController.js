@@ -14,9 +14,9 @@ const Op=db.Sequelize.Op
 const productsController = {
 
     create: (req, res)=>{
-        db.Category.findAll()
+        category: db.Category.findAll()
         .then((category)=>{
-            return res.render('createProduct',{category:category})
+            res.render('createProduct',{category:category})
         })
 
         db.Brand.findAll()
