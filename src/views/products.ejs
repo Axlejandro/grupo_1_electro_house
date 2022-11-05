@@ -8,24 +8,24 @@
 
             <main>
 
-                <div>
-                    <section class="banner">
-                        <img src="images/logo/banner.png" alt="Banner de ofertas" class="banner">
-                    </section>
-                </div>
+                
 
                 <section class="newitems">
                     <h3>Productos</h3>
 
                     <div class="products">
 
-                        <%products.forEach(product=> { %>
+                        <%product.forEach(product=> { %>
 
 
 
                             <article>
+                                
                                 <img src="/images/products/<%= product.image%>" alt="Imagen" class="product_img">
                                 <div class="main-article">
+                                    <h4 class="description">
+                                        <%= product.name%>
+                                    </h4>
                                     <h4 class="description">
                                         <%= product.description%>
                                     </h4>

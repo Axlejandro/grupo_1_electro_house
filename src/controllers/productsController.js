@@ -13,7 +13,7 @@ const Op=db.Sequelize.Op
 
 const productsController = {
 
-    create: (req, res)=>{
+    'create': (req, res)=>{
         category: db.Category.findAll()
         .then((category)=>{
             res.render('createProduct',{category:category})
@@ -25,10 +25,10 @@ const productsController = {
         })
     }
     ,
-    products: (req, res) =>{
+    'products': (req, res) =>{
         db.Product.findAll()
         .then((product)=>{
-            return res.render('products',{product:product})
+            res.render('products.ejs',{product})
         })
     },
 
