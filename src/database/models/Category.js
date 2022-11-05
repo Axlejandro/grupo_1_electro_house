@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: false
     }
     
-    const Product = sequelize.define(alias, cols, config); 
+    const Category = sequelize.define(alias, cols, config); 
 
 
     Category.associate = function (models) {

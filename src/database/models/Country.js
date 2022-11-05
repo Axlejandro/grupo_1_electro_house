@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: false
     }
     
-    const Product = sequelize.define(alias, cols, config); 
+    const Country = sequelize.define(alias, cols, config); 
 
     Country.associate = function (models) {
         Country.hasMany(models.User, {
