@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Bienvenidos a Electro House</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Roboto&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/register-login.css">
-</head>
-</head>
-
+    
     <%- include('./partials/head') %>
 
 
 <body>
     <%- include('./partials/header') %>
 
-    <br>
-    <main class="login">
+    <main class="cart">
+        <br>
+        <h1 class="titulo-cart">LOGIN</h1>
+
+        <section class="resumen-compra">
+            <div class="caja-cupon">
+    
         <form action="/user/login-process" method="POST" class="form-login">
-        <h2>Iniciar sesion</h2>
+        
         <form action="/" method="POST" class="form-login">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <input type="text" name="name" placeholder="Nombre de usuario">
+            <br>
             <br>
             <input type="password" name="password" placeholder="Contraseña">
             <br>
-            <p><a href="#">Restablecer Contraseña</a></p>
             <br>
-            <button class="bottom" type="submit">Ingresar</button>
+            <p><a href="#" class="link-subrayado">Restablecer Contraseña</a></p>
             <br>
-            <p><a href="/user/register">Registrate</a></p>
+            <br>
+            <br>
+            <button class="btn" type="submit">Ingresar</button>
+            <br>
+            <br>
+            <br>
+            <p><a href="/user/register" class="link-subrayado">Registrate</a></p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
         </form>
+        </div>
+    </section>
     </main>
     <%- include('./partials/footer') %>
 
