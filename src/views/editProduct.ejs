@@ -18,10 +18,10 @@
                         <br>
                         <br>
 
-                        <form action="/products/create" method="POST" class="form-register" enctype="multipart/form-data">
-                            <input type="text" name="name" placeholder="Nombre del producto">
+                        <form action="/products/edit/<%= product.id%>?_method=PUT" method="POST" class="form-register" enctype="multipart/form-data">
+                            <input type="text" name="name" value="<%= product.name%>" placeholder="Nombre del producto">
                             <br>
-                            <input type="text" name="description" placeholder="Descripción del producto">
+                            <input type="text" name="description" value="<%= product.description%>" placeholder="Descripción del producto">
                             <br>
                             <br>
                             
@@ -32,12 +32,12 @@
 
                             <br>
                             <br>
-                            <input type="text" name="price" placeholder="Precio">
+                            <input type="text" name="price" value="<%= product.price%>" placeholder="Precio">
 
                             <h4>Categoria</h4>
                             <select name="category">
                                 <% category.forEach(category=> { %>
-                                <option  value="<%=category.id%>">
+                                <option  value="<%=category.id%>" <%= category.id==product.categories_id ? 'selected="selected"':''%>>
                                     <%= category.name%>
 
                                 </option>
@@ -47,7 +47,7 @@
                             <h4>Marca</h4>
                             <select name="brand">
                                 <% brand.forEach(brand=> { %>
-                                <option  value="<%=brand.id%>">
+                                <option  value="<%=brand.id%>" <%= brand.id==product.brand_id ? 'selected="selected"':''%>>
                                     <%= brand.name%>
 
                                 </option>
