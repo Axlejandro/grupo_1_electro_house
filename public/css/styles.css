@@ -258,6 +258,34 @@ p {
   flex-wrap: wrap;
 }
 
+.products-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-article {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.button-edit{
+  
+  width: 100%;
+    padding: 10px;
+    background-color: gray;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+  
+
+
+}
+
+
 
 .price {
   font-size: 18px;

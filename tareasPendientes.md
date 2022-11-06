@@ -26,6 +26,11 @@ formulario de login
 rutas de huespedes y usuarios
 función de recordar el usuario
 Rutas huespedes y usuario, si el usuario esta logueado entre al formulario de resgitro si no esta registrado llevarlo al login Midlewares
+UPDATE
+vista el mismo formulario
+valuo
+vista del registro de producto
+
 
 ## Sprint 6 --- Elizabeth
 Digrama de la base de datos

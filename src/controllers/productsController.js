@@ -2,27 +2,20 @@ let db =require("../database/models");
 const Op=db.Sequelize.Op
 
 
-//const fs=require("fs");
-//const path= require("path");
-//const productsFilePath = path.join(__dirname, '../../data/productsDataBase.json');
 
-//function getProducts() {
-   // const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-   // return products;
-//}
 
 const productsController = {
 
     'products': (req, res) =>{
         db.Product.findAll()
         .then((product)=>{
-            res.render('products.ejs',{product})
+            res.render('./products/products',{product})
         })
     },
 
     'create': async (req, res)=>{
         
-        res.render('createProduct', {
+        res.render('./admin/createProduct', {
             category: await db.Category.findAll(),
             brand: await db.Brand.findAll()
             
@@ -45,7 +38,7 @@ const productsController = {
 
     'edit': async(req, res)=>{
         const product= await db.Product.findByPk(req.params.id);
-        res.render('editProduct',{
+        res.render('./admin/editProduct',{
             product,
             category: await db.Category.findAll(),
             brand: await db.Brand.findAll()
@@ -68,17 +61,16 @@ const productsController = {
          res.redirect("/products/products")
      },
 
-    
-    
-    
+    'delete' : async (req, res) => {
+        const product= await db.Product.findByPk(req.params.id);
+        await db.Product.destroy({where: {id:product.id},force: true})
+        await res.redirect("/products/products")
+ 
+    }
 
-    
 
     
 }
-
-
-
 
 
 module.exports = productsController;
