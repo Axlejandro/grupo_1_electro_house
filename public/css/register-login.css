@@ -15,8 +15,7 @@
 .register {
 
   padding-top: 8px;
-  display: flex;
-  flex-direction: column;
+ 
  
  
   
@@ -24,7 +23,10 @@
 }
 .btn,
 .btn-secondary{
-    
+    color: white;
+    background-color: blue;
+     justify-content: center;
+  
 }
 
 
