@@ -50,3 +50,12 @@ INSERT INTO `electrohouse_db`.`products` VALUES (7,'Huawei Nova 9','Teléfono ú
 INSERT INTO `electrohouse_db`.`products` VALUES (8,'Xbox Series X','Consola 1TB','ConsolaXbox.jpg',3800000,3,7);
 INSERT INTO `electrohouse_db`.`products` VALUES (9,'Play Station 5','Consola 1TB','ConsolaPlay.jpg',4250000,3,8);
 INSERT INTO `electrohouse_db`.`products` VALUES (10,'Nintendo Switch','Consola 1TB','ConsolaNintendo.jpg',1550000,3,9);
+
+
+-- -----------------------------------------------------
+-- Table `electrohouse_db`.`users`
+-- -----------------------------------------------------
+INSERT INTO `electrohouse_db`.`users` (`id`, `fullName`, `userName`, `email`, `phoneNumber`, `password`, `image`, `countries_id`) VALUES ('1', 'ELizabeth Vélez', 'EliVelez', 'eli.velez@electrohouse.com', '573054863384', '12345678', 'eli.jpg', '4');
+INSERT INTO `electrohouse_db`.`users` (`id`, `fullName`, `userName`, `email`, `phoneNumber`, `password`, `image`, `countries_id`) VALUES ('2', 'Cristiam Baez', 'CristiamBaez', 'cristiam.baez@electrohouse.com', '573166181778', '12345678', 'cristiam.jpg', '4');
+INSERT INTO `electrohouse_db`.`users` (`id`, `fullName`, `userName`, `email`, `phoneNumber`, `password`, `image`, `countries_id`) VALUES ('3', 'Alejandro Armesto', 'AleArmesto', 'ale.armesto@electrohouse.com', '5493815264428', '12345678', 'ale.jpg', '1');
+INSERT INTO `electrohouse_db`.`users` (`id`, `fullName`, `userName`, `email`, `phoneNumber`, `password`, `image`, `countries_id`) VALUES ('4', 'Juan Arellano', 'JuanArellano', 'juan.arellano@electrohouse.com', '573144914825', '12345678', 'juan.jpg', '4');

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body>
+
+        <%- include('../partials/header') %>
+
+            <main>
+
+                
+
+                <section class="newitems">
+                    <h3>Productos</h3>
+
+                    <div class="products">
+
+                        <%product.forEach(product=> { %>
+
+
+
+                            <article>
+                                
+                                <img src="/images/products/<%= product.image%>" alt="Imagen" class="product_img">
+                                <div class="main-article">
+                                    <h4 class="description">
+                                        <%= product.name%>
+                                    </h4>
+                                    <h4 class="description">
+                                        <%= product.description%>
+                                    </h4>
+                                    <div class="price-discount">
+                                        <p class="price">$ <%= product.price%>
+                                        </p>
+                                        <% if (product.discount>0) { %>
+                                            <p class="discount">
+                                                <%= product.discount%>
+                                            </p>
+                                            <% } %>
+                                    </div>
+                                </div>
+
+                            </article>
+
+                            <% }) %>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+
+            <%- include('../partials/footer') %>
+
+
+
+    </body>
+
+</html>

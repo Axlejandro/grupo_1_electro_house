@@ -13,94 +13,81 @@
                         <img src="images/logo/banner.png" alt="Banner de ofertas" class="banner">
                     </section>
                 </div>
+<br>
+<br>
 
+
+                <h3>Productos Nuevos 2022</h3>
+                <br>
+                
+                
                 <section class="newitems">
-                    <h3>New Items</h3>
 
-                    <div class="products">
+                    <div >
+                            <img src="images/newitems.png" class="imgHome">
+                        
+                    </div>
 
-                        <%products.forEach(product=> { %>
-
-                            <% if (product.newItem==true) { %>
-
-                                <article>
-                                    <img src="/images/products/<%= product.image%>" alt="Imagen" class="product_img">
-                                    <div class="main-article">
-                                        <h4 class="description">
-                                            <%= product.description%>
-                                        </h4>
-                                        <div class="price-discount">
-                                            <p class="price">$ <%= product.price%>
-                                            </p>
-                                            <% if (product.discount>0) { %>
-                                                <p class="discount">
-                                                    <%= product.discount%>
-                                                </p>
-                                                <% } %>
-                                        </div>
-                                    </div>
-
-                                </article>
-                                <% } %>
-                                    <% }) %>
-
+                    <div class="textohome">
+                        
+                      
+                        
                     </div>
 
                 </section>
 
+<br>
+<br>
 
-                <section>
-                    <h3>Categorias Populares</h3>
+                <h3>Categorias</h3>
+                <br>
 
-                    <div class="categorias-container">
 
-                        <ul class="categorias">
-                            <li><a href="#"><i class="fa-solid fa-gamepad"></i> Gamer</a></li>
-                            <li><a href="#"><i class="fa-solid fa-laptop"></i> Portatiles</a></li>
-                            <li><a href="#"><i class="fa-solid fa-headset"></i> Accesorios</a></li>
-                            <li><a href="#"><i class="fa-solid fa-hard-drive"></i> Almacenamiento</a></li>
-                            <li><a href="#"><i class="fa-solid fa-fan"></i> Partes</a></li>
-                        </ul>
-                    </div>
+                <div class="categorias-container">
 
-                </section>
+                    <ul class="categorias">
+                        <li><a href="#" class="link-subrayado"><i class="fa-solid fa-gamepad"></i> Video Juegos</a></li>
+                        <li><a href="#" class="link-subrayado"><i class="fa-solid fa-laptop"></i> Computadores</a></li>
+                        <li><a href="#" class="link-subrayado"><i class="fa-solid fa-headset"></i> Teléfonos</a></li>
+
+                    </ul>
+                </div>
+
+
 
 
                 <section class="bestsellers">
-                    <h3>Bestsellers</h3>
-
-
-
-                    <div class="products">
-
-                        <%products.forEach(product=> { %>
-
-                            <% if (product.bestSeller==true) { %>
-
-                                <article>
-                                    <img src="/images/products/<%= product.image%>" alt="Imagen" class="product_img">
-                                    <div class="main-article">
-                                        <h4 class="description">
-                                            <%= product.description%>
-                                        </h4>
-                                        <div class="price-discount">
-                                            <p class="price">$ <%= product.price%>
-                                            </p>
-                                            <% if (product.discount>0) { %>
-                                                <p class="discount">
-                                                    <%= product.discount%>
-                                                </p>
-                                                <% } %>
-                                        </div>
-                                    </div>
-
-                                </article>
-                                <% } %>
-                                    <% }) %>
-
-                    </div>
+                    <h3>Los más vendidos</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
 
                 </section>
+
+
+                <h3>Marcas</h3>
+
+
+
+                <div class="categorias-container">
+
+                    <ul class="categorias">
+                        <li><a href="#" class="link-subrayado"> Acer</a></li>
+                        <li><a href="#" class="link-subrayado"> Samsung</a></li>
+                        <li><a href="#" class="link-subrayado"> Huawei</a></li>
+                        <li><a href="#" class="link-subrayado"> Lenovo</a></li>
+                        <li><a href="#" class="link-subrayado"> Iphone</a></li>
+                        <li><a href="#" class="link-subrayado"> Asus</a></li>
+                        <li><a href="#" class="link-subrayado"> Xbox</a></li>
+                        <li><a href="#" class="link-subrayado"> Play Station</a></li>
+                        <li><a href="#" class="link-subrayado"> Nintendo</a></li>
+
+
+                    </ul>
+                </div>
 
             </main>
 

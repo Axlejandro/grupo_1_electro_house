@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body>
+
+        <%- include('../partials/header') %>
+
+            <main>
+
+                <h3>Administrador de Productos</h3>
+                <br>
+                <br>
+                <br>
+                <div class="list-article">
+                    <a href="/products/create"> <button class="button-edit" type="submit"> Crear Producto Nuevo</button></a>
+                    </div>
+                    <div class="list-article">
+                        <br>
+                        <br>
+                        <br>
+
+                
+
+                <section class="list-article">
+                   
+
+                    <div class="products-list">
+
+                        <%product.forEach(product=> { %>
+
+
+
+                            <article class="list-article">
+                                
+                                <img src="/images/products/<%= product.image%>" alt="Imagen" class="product_img">
+                                <div class="list-article">
+                                    <div class="list-article">
+                                    <p class="list-article">
+                                        <%= product.name%>
+                                    </p>
+                                    </div>
+                                    <div class="list-article">
+                                    <p class="list-article">
+                                        <%= product.description%>
+                                    </p>
+                                    </div>
+                                    <div class="list-article">
+                                        <p>$ <%= product.price%>
+                                        </p>
+                                        <% if (product.discount>0) { %>
+                                            <p class="list-article">
+                                                <%= product.discount%>
+                                            </p>
+                                            <% } %>
+                                    </div>
+                                    <div class="list-article">
+                                    <a href="/products/edit/<%= product.id%>"><button class="button-edit" type="submit">Editar</button></a>
+                                    </div>
+                                    <div class="list-article">
+            
+                            <form action="/products/delete/<%= product.id%>?_method=DELETE" method="POST" class="form-register" enctype="multipart/form-data">
+                            <button class="button-edit" type="submit"> Eliminar</button>
+                            </form>
+                            </div>
+                            <br>
+                        </form>
+                                </div>
+
+                                 
+
+                            </article>
+
+                            <% }) %>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+
+            <%- include('../partials/footer') %>
+
+
+
+    </body>
+
+</html>
