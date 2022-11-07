@@ -3,67 +3,51 @@
 
 <%- include('../partials/head') %>
 
-    <body>
-        <%- include('../partials/header') %>
+<body>
+    <%- include('../partials/header') %>
+        <main class="cart">
 
+            <h1 class="titulo-cart">REGISTRO</h1>
 
-            <main class="cart">
-                <h1 class="titulo-cart">REGISTRO</h1>
+            <section class="resumen-compra">
+                <div class="caja-cupon">
+                    
+                    <form action="/users/create" method="POST" class="form-register" enctype="multipart/form-data">
+                        <br><br><br><br>
+                        <input type="text" name="name" placeholder="Nombre y apellido" value="<%= locals.oldData ? oldData.name : null %>">
+                        <br>
+                        <input type="text" name="user" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.user : null %>">
+                        <input type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>">
+                        <input type="text" name="address" placeholder="Domicilio" value="<%= locals.oldData ? oldData.address : null %>">
+                        <select name="country">
+                            <% country.forEach(country=> { %>
+                            <option  value="<%=country.id%>">
+                                <%= country.name%>
+                            </option>
+                            <%})%>
+                        </select>
+                        <br>
+                        <input type="tel" name="tel" placeholder="Telefono" value="<%= locals.oldData ? oldData.tel : null %>">
+                        <br>
+                        <input type="password" name="pass" placeholder="Contraseña" value="<%= locals.oldData ? oldData.pass : null %>">
+                        <br>
+                        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" value="<%= locals.oldData ? oldData.pass_confirm : null %>">
+                        <br><br><br>
+                        <label>Fecha de nacimiento</label> <input type="date" name="birth_date" id="birth_date" value="<%= locals.oldData ? oldData.birth_date : null %>">
+                        <br><br><br>
+                        <h4>Elegí tu foto de usuario</h4>
+                        <br>
+                        <input type="file" name="image">
+                        <br><br><br><br>
+                        <button class="btn" type="submit">Enviar</button>
+                        <button class="btn-secondary" type="reset">Borrar</button>
+                        <br><br><br><br><br>
+                    </form>
+                </div>
+            </section>
 
-                <section class="resumen-compra">
-                    <div class="caja-cupon">
-
-
-
-                        <form action="/user/" method="POST" class="form-register">
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <input type="text" name="name" placeholder="Nombre y apellido">
-                            <br>
-                            <input type="text" name="user" placeholder="Nombre de usuario">
-                            
-                            <input type="email" name="email" placeholder="E-mail">
-                            
-                            <input type="text" name="address" placeholder="Domicilio">
-                            
-                            <input type="text" name="pais" placeholder="Pais de residencia">
-                            <br>
-                            <input type="tel" name="tel" placeholder="Telefono">
-                            <br>
-                            <input type="password" name="pass" placeholder="Contraseña">
-                            <br>
-                            <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
-                            <br>
-                            <br>
-                            <br>
-                            <label>Fecha de nacimiento</label> <input type="date" name="birth_date" id="birth_date">
-                            <br>
-                            <br>
-                            <br>
-                            <h4>Elegí tu foto de usuario</h4>
-                            <br>
-                            <input type="file" name="avatar">
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <button class="btn" type="submit">Enviar</button>
-                            <button class="btn-secondary" type="reset">Borrar</button>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                        </form>
-                    </div>
-                </section>
-
-            </main>
-            </div>
-            <%- include('../partials/footer') %>
-
-    </body>
+        </main>
+    <%- include('../partials/footer') %>
+</body>
 
 </html>
