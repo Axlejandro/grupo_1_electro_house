@@ -1,55 +1,27 @@
 <!DOCTYPE html>
 <html>
-
-    
     <%- include('../partials/head') %>
-
-
 <body>
     <%- include('../partials/header') %>
-
     <main class="cart">
         <br>
         <h1 class="titulo-cart">LOGIN</h1>
-
         <section class="resumen-compra">
             <div class="caja-cupon">
-    
-        <form action="/user/login-process" method="POST" class="form-login">
-        
-        <form action="/" method="POST" class="form-login">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <input type="text" name="name" placeholder="Nombre de usuario">
-            <br>
-            <br>
-            <input type="password" name="password" placeholder="Contraseña">
-            <br>
-            <br>
-            <p><a href="#" class="link-subrayado">Restablecer Contraseña</a></p>
-            <br>
-            <br>
-            <br>
-            <button class="btn" type="submit">Ingresar</button>
-            <br>
-            <br>
-            <br>
-            <p><a href="/users/create" class="link-subrayado">Registrate</a></p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </form>
-        </div>
-    </section>
+                <form action="/users/login" method="POST" class="form-login">
+                    <br><br><br><br><br>
+                    <input type="text" name="email" placeholder="E-mail">
+                    <br><br>
+                    <input type="password" name="password" placeholder="Contraseña">
+                    <br><br><br>
+                    <button class="btn" type="submit">Ingresar</button>
+                    <br><br><br>
+                    <p><a href="/users/create" class="link-subrayado">Registrate</a></p>
+                    <br><br><br><br><br>
+                </form>
+            </div>
+        </section>
     </main>
     <%- include('../partials/footer') %>
-
-
 </body>
-
 </html>

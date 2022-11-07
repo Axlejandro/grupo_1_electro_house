@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <br>
+        <% if (locals.userLogged) { %>
+            <h1 style="color: black; text-align: center;"> Bienvenido <%= userLogged.fullName %>!</h1>
+            <br>
+            <h3 style="color: black; text-align: center;"> Tu email es el siguiente: <%= userLogged.email %></h3>
+            <br>
+        <% } %>
+            <section >
+                <div class="caja-cupon">
+                    <% if (locals.userLogged) { %>
+                        <img src="/images/users/<% locals.userLogged.image %>" alt="Imagen" class="product_img">
+                    <% } %>
+                </div>
+            </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

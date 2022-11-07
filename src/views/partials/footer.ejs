@@ -4,13 +4,17 @@
 
         
 
-        <div>        
+        <div>
             <ul>
-                <li><a href="#" class="link"><i class="fa-brands fa-whatsapp"></i> Contacto</a></li>
-                <li><a href="/users/create" class="link"><i class="far fa-id-card"></i> Registrarse</a></li>
-                <li><a href="#" class="link"><i class="fas fa-truck"></i> Seguí tu compra</a></li>
-                <li><a href="/users/login" class="link"><i class="far fa-id-card"></i> Iniciar Sesion</a></li>
-                <li><a href="/admin/listproducts" class="link"><i class="far fa-id-card"></i> Administrar Productos</a></li>
+                <% if (locals.isLogged) { %>
+                    <li><a href="/admin/listproducts" class="link"><i class="far fa-id-card"></i> Administrar Productos</a></li>
+                    <li><a href="#" class="link"><i class="fa-brands fa-whatsapp"></i> Contacto</a></li>
+                    <li><a href="#" class="link"><i class="fas fa-truck"></i> Seguí tu compra</a></li>
+                    <li><a href="/users/logout" class="link"><i class="far fa-id-card"></i> Cerrar Sesión</a></li>
+                <% } else { %>
+                    <li><a href="/users/create" class="link"><i class="far fa-id-card"></i> Registrarse</a></li>
+                    <li><a href="/users/login" class="link"><i class="far fa-id-card"></i> Iniciar Sesion</a></li>
+                <% } %>
             </ul>
         </div>
 

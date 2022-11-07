@@ -26,7 +26,7 @@ const usersController = {
             image: req.file?.filename || 'imagen.png',
             countries_id: req.body.country
         });
-        res.redirect("/")
+        res.redirect("/users")
 
 
         // let country = await db.Country.findAll()
@@ -112,6 +112,46 @@ const usersController = {
 
     'login': (req, res) =>{
         res.render('./users/login');
+    },
+
+    'loginProcess': async (req, res) => {
+        await db.User.findOne(
+            {
+                where: {
+                    email: req.body.email
+                }
+            }
+        )
+        .then(user => {
+            let usuarioJson = JSON.parse(JSON.stringify(user))
+
+            userToLogin = usuarioJson;
+        
+            if(userToLogin) {
+                // return res.send(userToLogin);
+                let passwordValidate = bcrypt.compareSync(req.body.password, userToLogin.password);
+                    if(passwordValidate) {
+                        // Guarda todos los datos del usuario en una variable de session
+                        // primero quitar el atributo password del objeto
+                        delete userToLogin.password;
+                        req.session.userLogged = userToLogin;
+                        return res.redirect('/users/profile');
+                    }
+                    return res.send('Contraseña Inconrrecta');
+            }
+            return res.send('No se encuentra un usuario con el email ingresado');
+        })
+    },
+
+    'profile': (req, res) =>{
+        res.render('./users/profile', {
+            user: req.session.userLogged
+        });
+    },
+
+    'logout': (req, res) =>{
+        req.session.destroy();
+        return res.redirect('/');
     },
 
     // edit: function(req, res){

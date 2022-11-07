@@ -59,14 +59,18 @@ const productsController = {
          });
          await product.save()
          res.redirect("/products/products")
-     },
+    },
 
     'delete' : async (req, res) => {
         const product= await db.Product.findByPk(req.params.id);
         await db.Product.destroy({where: {id:product.id},force: true})
         await res.redirect("/products/products")
  
-    }
+    },
+
+    'cart': (req, res) =>{
+        res.render('./products/cart');
+    },
 
 
     
