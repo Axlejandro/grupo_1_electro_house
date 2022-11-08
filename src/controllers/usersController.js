@@ -26,7 +26,7 @@ const usersController = {
             image: req.file?.filename || 'imagen.png',
             countries_id: req.body.country
         });
-        res.redirect("/users")
+        res.redirect("/")
 
 
         // let country = await db.Country.findAll()
@@ -137,9 +137,11 @@ const usersController = {
                         req.session.userLogged = userToLogin;
                         return res.redirect('/users/profile');
                     }
-                    return res.send('Contraseña Inconrrecta');
+                    return res.redirect("/users/login")
+                    // return res.send('Contraseña Inconrrecta');
             }
-            return res.send('No se encuentra un usuario con el email ingresado');
+            return res.redirect("/users/login")
+            // return res.send('No se encuentra un usuario con el email ingresado');
         })
     },
 
