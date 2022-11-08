@@ -33,7 +33,7 @@ const productsController = {
 
 
         });
-        res.redirect("/products/products")
+        res.redirect("/admin/listproducts")
     },
 
     'edit': async(req, res)=>{
@@ -58,7 +58,7 @@ const productsController = {
  
          });
          await product.save()
-         res.redirect("/products/products")
+         res.redirect("/admin/listproducts")
     },
 
     'delete' : async (req, res) => {
@@ -73,6 +73,37 @@ const productsController = {
     },
 
 
+    //Listado de productos por categoria
+
+    'videoJuegos': (req, res) =>{
+        db.Product.findAll({
+            where: {categories_id:3}
+    })
+        
+        .then((product)=>{
+            res.render('./products/products',{product})
+        })
+    },
+
+    'computadores': (req, res) =>{
+        db.Product.findAll({
+            where: {categories_id:1}
+    })
+        
+        .then((product)=>{
+            res.render('./products/products',{product})
+        })
+    },
+
+    'telefonos': (req, res) =>{
+        db.Product.findAll({
+            where: {categories_id:2}
+    })
+        
+        .then((product)=>{
+            res.render('./products/products',{product})
+        })
+    },
     
 }
 

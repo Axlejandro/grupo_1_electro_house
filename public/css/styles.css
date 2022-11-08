@@ -30,8 +30,13 @@ html {
 }
 
 .imgHome {
-  width: 90%;
-  height: 90%;
+  width:95%;
+  height: 95%;
+}
+
+.imgFooter {
+  width:97.5%;
+  height: 100%;
 }
 
 .newitems {
@@ -353,7 +358,7 @@ article div.main-article {
   width: 100%;
   align-items: center;
   flex-direction: column;
-  background-image: url('../images/backgroundCategories.png');
+ 
 
 }
 
@@ -447,7 +452,7 @@ article div.main-article {
     width: 90%;
     justify-content: space-between;
     font-size: 24px;
-    color: black;
+    color: var(--azul1);
     padding: 50px 10px 80px 10px;
   }
 

@@ -31,7 +31,10 @@ router.post('/create', uploadImage.single('image'), productsController.store);
 
 
 router.get('/products', productsController.products);
-//router.post('/products', productsController.products)
+//router.post('/products', productsController.products);
+router.get('/video-juegos', productsController.videoJuegos);
+router.get('/computadores', productsController.computadores);
+router.get('/telefonos', productsController.telefonos);
 
 router.get('/edit/:id', authMiddleware, productsController.edit);
 router.put('/edit/:id',uploadImage.single('image'), productsController.update);
