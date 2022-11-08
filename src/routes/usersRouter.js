@@ -22,5 +22,8 @@ router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 router.get('/profile', authMiddleware, usersController.profile);
 router.get('/logout', usersController.logout);
+router.get('/edit/:id', authMiddleware, usersController.edit);
+router.put('/edit/:id',uploadImage.single('image'), usersController.update);
+router.delete('/delete/:id', authMiddleware, uploadImage.single('image'), usersController.delete);
 
 module.exports = router;

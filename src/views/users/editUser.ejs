@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html>
-
     <%- include('../partials/head') %>
-
 <body>
     <%- include('../partials/header') %>
-
-  
-  
    <br>
    <div class="container">
     <main class="register">
-        <h2> Editar Usuario</h2>
-        <form action="/userEdit?_method=PUT" method="POST" class="form-register">
-            <input type="text" name="name" placeholder="Nombre y apellido" value="<%= userToEdit.name %> ">
-            <input type="text" name="user" placeholder="Nombre de usuario">
-            <input type="email" name="email" placeholder="E-mail">
-            <input type="text" name="addres" placeholder="Domicilio">
-            <input type="text" name="pais" placeholder="Pais de residencia">
-            <input type="tel" name="tel" placeholder="Telefono">
-            <input type="password" name="pass" placeholder="Contraseña">
-            <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+        <h2> Editar Usuario</h2><br>
+        <form action="/users/edit/<%= user.id%>?_method=PUT" method="POST" class="form-register" enctype="multipart/form-data">
+            <label for="name">Nombre Completo</label>
+            <input type="text" name="name" placeholder="Nombre y apellido" value="<%= user.fullName%>"><br>
+            <label for="user">Nombre de Usuario</label>
+            <input type="text" name="user" placeholder="Nombre de usuario" value="<%= user.userName%>"><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="E-mail" value="<%= user.email%>"><br>
+            <label for="addres">Dirección</label>
+            <input type="text" name="addres" placeholder="Domicilio" value="<%= user.adress%>"><br>
+            <label for="country">Pais</label><br>
+            <select name="country">
+                <% country.forEach(country=> { %>
+                    <option  value="<%=country.id%>" <%= country.id==user.countries_id ? 'selected="selected"':''%>>
+                        <%= country.name%>
+                    </option>
+                <%})%>
+            </select><br>
+            <label for="tel">Teléfono</label>
+            <input type="tel" name="tel" placeholder="Telefono" value="<%= user.phoneNumber%>"><br>
+            <label>Fecha de nacimiento</label> <input type="date" name="birth_date" id="birth_date" value="<%= user.birthdayDate%>">
             <br>
-           <label>Fecha de nacimiento</label> <input type="date" name="birth_date" id="birth_date">
-            <br>
-            <h4>Elegí tu foto de usuario</h4>
-            <br>
-            <input type="file" name="avatar">
-            <br>
+            <label for="tel">Imagen de perfil</label>
+            <input type="file" name="image">
+            <br><br>
             <button class="btn" type="submit">Editar</button>
             <br>
-        </form> 
-    
-    </main>
+        </form><br>
+    </main><br>
 </div>
 <%- include('../partials/footer') %>
-
 </body>
-
 </html>
     

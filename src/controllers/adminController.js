@@ -12,6 +12,13 @@ const adminController = {
             res.render('./admin/listProducts',{product})
         })
     },
+
+    'listUsers': (req, res) =>{
+        db.User.findAll()
+        .then((user)=>{
+            res.render('./admin/listUsers',{user})
+        })
+    }
 }
 
 

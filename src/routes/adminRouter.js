@@ -24,6 +24,7 @@ const uploadImage = multer({ storage: storage});
 
 
 router.get('/listproducts', adminController.list);
+router.get('/listusers', adminController.listUsers);
 
 
 module.exports = router;

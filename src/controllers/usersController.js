@@ -154,6 +154,36 @@ const usersController = {
         return res.redirect('/');
     },
 
+    'edit': async(req, res)=>{
+        const user= await db.User.findByPk(req.params.id);
+        res.render('./users/editUser',{
+            user,
+            country: await db.Country.findAll()
+        })
+    },
+
+    'update':async (req, res)=>{
+        const user= await db.User.findByPk(req.params.id);
+        await user.update({
+            fullName: req.body.name,
+            userName: req.body.user,
+            email: req.body.email,
+            adress: req.body.addres,
+            phoneNumber: req.body.tel,
+            birthdayDate: req.body.birth_date,
+            image: req.file?.filename || user.image,
+            countries_id: req.body.country
+        });
+        await user.save()
+        res.redirect("/admin/listusers")
+    },
+
+    'delete' : async (req, res) => {
+        const user = await db.User.findByPk(req.params.id);
+        await db.User.destroy({where: {id:user.id},force: true})
+        await res.redirect("/admin/listusers")
+    },
+
     // edit: function(req, res){
     //     let idUser = req.params.idUSer
     //     let userToEdit = userDataBase[idUser];
