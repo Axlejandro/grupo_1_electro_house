@@ -1,76 +1,75 @@
 <!DOCTYPE html>
 <html>
 
-    <%- include('../partials/head') %>
+<%- include('../partials/head') %>
 
-<body>
-    <%- include('../partials/header') %>
+    <body>
+        <%- include('../partials/header') %>
 
-  
-  
-   <br>
-   <main class="cart">
+
+
+            <br>
+            <main class="cart">
                 <h1 class="titulo-cart">CARGAR PRODUCTO</h1>
 
                 <section class="resumen-compra">
                     <div class="caja-cupon">
-                        <br>
-                        <br>
-                        <br>
-
-                        <form action="/products/create" method="POST" class="form-register" enctype="multipart/form-data">
-                            <input type="text" name="name" placeholder="Nombre del producto">
+                        <br><br><br>                     
+                        <form action="/products/create" method="POST" class="form-register"
+                            enctype="multipart/form-data" id="form">
+                            <div>
+                            <input type="text" name="name" placeholder="Nombre del producto" id="name">
+                            <small></small>
+                            </div>
                             <br>
-                            <input type="text" name="description" placeholder="Descripción del producto">
-                            <br>
-                            <br>
-                            
-
+                            <div>
+                            <input type="text" name="description" placeholder="Descripción del producto" id="description">
+                            <small></small>
+                            </div>
+                            <br><br>
                             <h4>Subí la foto del producto</h4>
                             <br>
-                            <input type="file" name="image">
-
-                            <br>
-                            <br>
-                            <input type="text" name="price" placeholder="Precio">
-
+                            <div>
+                            <input type="file" name="image" id="image">
+                            <small></small>
+                            </div>
+                            <br><br> 
+                            <div>                           
+                            <input type="text" name="price" placeholder="Precio" id="price">
+                            <small></small>
+                            </div>
+                            
                             <h4>Categoria</h4>
                             <select name="category">
                                 <% category.forEach(category=> { %>
-                                <option  value="<%=category.id%>">
-                                    <%= category.name%>
-
-                                </option>
-                                <%})%>
+                                    <option value="<%=category.id%>">
+                                        <%= category.name%>
+                                    </option>
+                                    <%})%>
                             </select>
 
                             <h4>Marca</h4>
                             <select name="brand">
                                 <% brand.forEach(brand=> { %>
-                                <option  value="<%=brand.id%>">
-                                    <%= brand.name%>
+                                    <option value="<%=brand.id%>">
+                                        <%= brand.name%>
 
-                                </option>
-                                <%})%>
+                                    </option>
+                                    <%})%>
                             </select>
 
-                            
-                            
-
-                            <br>
-                            <br>
-                            <br>
+                            <br><br><br>                        
                             <button class="btn" type="submit">Cargar producto</button>
                             <button class="btn-secondary" type="reset">Borrar</button>
                             <br>
-                        </form> 
-        </div>
-        </section>
-    
-    </main>
-</div>
+                        </form>
+                    </div>
+                </section>
 
+            </main>
+            </div>
 
-</body>
+            <script src="/js/productValidate.js"></script>
+    </body>
 
 </html>

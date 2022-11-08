@@ -12,14 +12,30 @@
             <section class="resumen-compra">
                 <div class="caja-cupon">
                     
-                    <form action="/users/create" method="POST" class="form-register" enctype="multipart/form-data">
+                    <form action="/users/create" method="POST" class="form-register" enctype="multipart/form-data" id="form">
                         <br><br><br><br>
-                        <input type="text" name="name" placeholder="Nombre y apellido" value="<%= locals.oldData ? oldData.name : null %>">
+                        <div>
+                        <input type="text" name="name" placeholder="Nombre y apellido" value="<%= locals.oldData ? oldData.name : null %>" id="name">
                         <br>
-                        <input type="text" name="user" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.user : null %>">
-                        <input type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>">
-                        <input type="text" name="address" placeholder="Domicilio" value="<%= locals.oldData ? oldData.address : null %>">
-                        <select name="country">
+                        <small></small>
+                        </div>
+                        <br>
+                        <div>
+                        <input type="text" name="user" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.user : null %>" id="user">
+                        <small></small>
+                        </div>
+                        <br>
+                        <div>
+                        <input type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>" id="email">
+                        <small></small>
+                        </div>
+                        <br>
+                        <div>
+                        <input type="text" name="address" placeholder="Domicilio" value="<%= locals.oldData ? oldData.address : null %>" id="address">
+                        <small></small>
+                        </div>
+                        <br>
+                        <select name="country" id="country">
                             <% country.forEach(country=> { %>
                             <option  value="<%=country.id%>">
                                 <%= country.name%>
@@ -27,17 +43,29 @@
                             <%})%>
                         </select>
                         <br>
-                        <input type="tel" name="tel" placeholder="Telefono" value="<%= locals.oldData ? oldData.tel : null %>">
+                        <div>
+                        <input type="tel" name="tel" placeholder="Telefono" value="<%= locals.oldData ? oldData.tel : null %>" id="tel">
+                        <small></small>
+                        </div>
                         <br>
-                        <input type="password" name="pass" placeholder="Contraseña" value="<%= locals.oldData ? oldData.pass : null %>">
+                        <div>
+                        <input type="password" name="pass" placeholder="Contraseña" value="<%= locals.oldData ? oldData.pass : null %>" id="pass">
+                        <small></small>
+                        </div>
                         <br>
-                        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" value="<%= locals.oldData ? oldData.pass_confirm : null %>">
+                        <div>
+                        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" value="<%= locals.oldData ? oldData.pass_confirm : null %>" id="pass_confirm">
+                        <small></small>
+                        </div>
                         <br><br><br>
-                        <label>Fecha de nacimiento</label> <input type="date" name="birth_date" id="birth_date" value="<%= locals.oldData ? oldData.birth_date : null %>">
+                        <label>Fecha de nacimiento</label> <input type="date" name="birth_date" id="birth_date" value="<%= locals.oldData ? oldData.birth_date : null %>" id="birth_date">
                         <br><br><br>
                         <h4>Elegí tu foto de usuario</h4>
                         <br>
-                        <input type="file" name="image">
+                        <div>
+                        <input type="file" name="image" id="image">
+                        <small></small>
+                        </div>
                         <br><br><br><br>
                         <button class="btn" type="submit">Enviar</button>
                         <button class="btn-secondary" type="reset">Borrar</button>
@@ -48,6 +76,8 @@
 
         </main>
     <%- include('../partials/footer') %>
+
+    <script src="/js/registerValidate.js"></script>
 </body>
 
 </html>

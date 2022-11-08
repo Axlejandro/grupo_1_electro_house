@@ -137,11 +137,13 @@ const usersController = {
                         req.session.userLogged = userToLogin;
                         return res.redirect('/users/profile');
                     }
-                    return res.redirect("/users/login")
-                    // return res.send('Contraseña Inconrrecta');
+                    // return res.redirect("/users/login")
+                    return res.send('Contraseña Inconrrecta');
+                    
             }
-            return res.redirect("/users/login")
-            // return res.send('No se encuentra un usuario con el email ingresado');
+            // return res.redirect("/users/login")
+            return res.send('No se encuentra un usuario con el email ingresado');
+            
         })
     },
 

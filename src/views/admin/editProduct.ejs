@@ -18,23 +18,29 @@
                         <br>
                         <br>
 
-                        <form action="/products/edit/<%= product.id%>?_method=PUT" method="POST" class="form-register" enctype="multipart/form-data">
-                            <input type="text" name="name" value="<%= product.name%>" placeholder="Nombre del producto">
+                        <form action="/products/edit/<%= product.id%>?_method=PUT" method="POST" class="form-register" enctype="multipart/form-data" id="form">
+                            <div>
+                            <input type="text" name="name" value="<%= product.name%>" placeholder="Nombre del producto" id="name">
+                            <small></small>
+                            </div>
                             <br>
-                            <input type="text" name="description" value="<%= product.description%>" placeholder="Descripción del producto">
-                            <br>
-                            <br>
-                            
-
+                            <div>
+                            <input type="text" name="description" value="<%= product.description%>" placeholder="Descripción del producto" id="description">
+                            <small></small>
+                            </div>
+                            <br><br>                        
                             <h4>Subí la foto del producto</h4>
                             <br>
+                            
                             <input type="file" name="image">
+                            
+                            <br><br>  
+                            <div>                          
+                            <input type="text" name="price" value="<%= product.price%>" placeholder="Precio" id="price">
+                            <small></small>
+                            </div>
 
-                            <br>
-                            <br>
-                            <input type="text" name="price" value="<%= product.price%>" placeholder="Precio">
-
-                            <h4>Categoria</h4>
+                            <h4>Categoria</h4>                            
                             <select name="category">
                                 <% category.forEach(category=> { %>
                                 <option  value="<%=category.id%>" <%= category.id==product.categories_id ? 'selected="selected"':''%>>
@@ -52,14 +58,8 @@
 
                                 </option>
                                 <%})%>
-                            </select>
-
-                            
-                            
-
-                            <br>
-                            <br>
-                            <br>
+                            </select>                          
+                            <br><br><br>                            
                             <button class="btn" type="submit">Editar</button>
                             <br>
                         
@@ -68,7 +68,7 @@
     
     </main>
 </div>
-
+<script src="/js/editProductValidate.js"></script>
 
 </body>
 

@@ -8,11 +8,15 @@
         <h1 class="titulo-cart">LOGIN</h1>
         <section class="resumen-compra">
             <div class="caja-cupon">
-                <form action="/users/login" method="POST" class="form-login">
+                <form action="/users/login" method="POST" class="form-login" id="form">
                     <br><br><br><br><br>
-                    <input type="text" name="email" placeholder="E-mail">
+                    <div>
+                        <ul class="errors"></ul>
+                    </div>
+                    <br>
+                    <input type="text" name="email" placeholder="E-mail" id="email">
                     <br><br>
-                    <input type="password" name="password" placeholder="Contraseña">
+                    <input type="password" name="password" placeholder="Contraseña" id="password">
                     <br><br><br>
                     <button class="btn" type="submit">Ingresar</button>
                     <br><br><br>
@@ -23,5 +27,6 @@
         </section>
     </main>
     <%- include('../partials/footer') %>
+    <script src="/js/loginValidate.js"></script>
 </body>
 </html>
